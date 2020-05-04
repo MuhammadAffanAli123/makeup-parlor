@@ -28,7 +28,7 @@ import AwesomeAlert from 'react-native-awesome-alerts';
       // setState({
       //   showAlert: false
       // });
-      },1200)
+      },1500)
  
     
   };

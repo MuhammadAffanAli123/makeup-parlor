@@ -18,8 +18,8 @@ import OrderHistory from './src/screen/orderHistory';
 import CustomSidebarMenu from './CustomSidebarMenu';
 import Splash from './src/screen/Splash'
 import Login from './src/screen/login'
-
-
+import  Signup from './src/screen/Signup'
+import Appoint from './src/screen/appoint'
 
 
 
@@ -27,7 +27,7 @@ const App = () => {
   return (
    <Root>
      <AppContainer/>
-     {/* <Login/> */}
+     {/* <Signup/> */}
    </Root>
   )
 }
@@ -84,7 +84,22 @@ const ServiceStack = createStackNavigator({
     }),
   },
 });
-const UpcomingStack = createStackNavigator({
+
+const  AppointStack = createStackNavigator({
+  Appoints: {
+    screen: Appoint,
+    navigationOptions: ({ navigation }) => ({
+      title: '  Upcoming APPOINTMENT ',
+      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+      headerStyle: {
+        backgroundColor: '#fb3e6c',
+      },
+      headerTintColor: '#fff',
+    }),
+  },
+});
+
+const OrderHistoryStack = createStackNavigator({
   upcomings: {
     screen: OrderHistory,
     navigationOptions: ({ navigation }) => ({
@@ -99,7 +114,7 @@ const UpcomingStack = createStackNavigator({
 });
 const DrawerNavigatorExample = createDrawerNavigator(
   {
-    NavScreen1: {
+    homes: {
       screen: HomeStack,
       navigationOptions: {
         drawerIcon:(
@@ -107,7 +122,7 @@ const DrawerNavigatorExample = createDrawerNavigator(
          )
       },
     },
-    NavScreen2: {
+    ServiceLink: {
       screen: ServiceStack,
       navigationOptions: {
         drawerIcon:(
@@ -115,32 +130,40 @@ const DrawerNavigatorExample = createDrawerNavigator(
          )
       },
     },
-    NavScreen3: {
-      screen: UpcomingStack,
+    OrderLink: {
+      screen: ServiceStack,
       navigationOptions: {
         drawerIcon:(
           <Icon style={{ color:'#333333', fontSize:20}} name='home'/>
          )
       },
     },
-    NavScreen4: {
-      screen: UpcomingStack,
+    UpcomingLink: {
+      screen:AppointStack,
       navigationOptions: {
         drawerIcon:(
           <Icon  name='home'/>
          )
       },
     },
-    NavScreen5: {
-      screen: HomeStack,
+    AddressLink: {
+      screen: AppointStack,
       navigationOptions: {
         drawerIcon:(
           <Icon  name='home'/>
          )
       },
     },
-    NavScreen6: {
-      screen: UpcomingStack,
+    InviteLink: {
+      screen: AppointStack,
+      navigationOptions: {
+        drawerIcon:(
+          <Icon  name='home'/>
+         )
+      },
+    },
+    ContactLink: {
+      screen: OrderHistoryStack ,
       navigationOptions: {
         drawerIcon:(
           <Icon style={{ color:'#333333', fontSize:20}} name='home'/>
@@ -149,7 +172,7 @@ const DrawerNavigatorExample = createDrawerNavigator(
     },
   },
   {
-    initialRouteName: 'NavScreen1',
+    initialRouteName: 'homes',
     contentComponent: CustomSidebarMenu,
   drawerPosition:'left',
     drawerWidth: Dimensions.get('window').width - 60,

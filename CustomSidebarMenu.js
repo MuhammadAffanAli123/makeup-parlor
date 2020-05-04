@@ -10,37 +10,37 @@ export default class CustomSidebarMenu extends Component {
       {
         navOptionThumb: 'home',
         navOptionName: 'Home',
-        screenToNavigate: 'NavScreen1',
+        screenToNavigate: 'homes',
       },
       {
         navOptionThumb: 'memory',
         navOptionName: 'SERVICES',
-        screenToNavigate: 'NavScreen2',
+        screenToNavigate: 'ServiceLink',
       },
       {
         navOptionThumb: 'assignment',
         navOptionName: 'ORDER HISTORY',
-        screenToNavigate: 'NavScreen3',
+        screenToNavigate: 'OrderLink',
       },
       {
         navOptionThumb: 'business',
         navOptionName: 'UPCOMING APPOINMENTS',
-        screenToNavigate: 'NavScreen4',
+        screenToNavigate: 'UpcomingLink',
       },
       {
         navOptionThumb: 'place',
         navOptionName: 'MY ADDRESS',
-        screenToNavigate: 'SUGGESTION FEEDBACK',
+        screenToNavigate: 'AddressLink',
       },
       {
         navOptionThumb: 'image',
         navOptionName: 'INVITE FRIENDS',
-        screenToNavigate: 'NavScreen6',
+        screenToNavigate: 'InviteLink',
       },
       {
         navOptionThumb: 'call',
         navOptionName: 'CONTACT US',
-        screenToNavigate: 'NavScreen7',
+        screenToNavigate: 'ContactLink',
       },
     ];
   }
