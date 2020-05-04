@@ -27,7 +27,7 @@ const App = () => {
   return (
    <Root>
      <AppContainer/>
-     {/* <Signup/> */}
+     {/* <OrderHistory/> */}
    </Root>
   )
 }
@@ -106,9 +106,10 @@ const OrderHistoryStack = createStackNavigator({
       title: 'Order History',
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#fb3e6c',
+        backgroundColor: 'white',
+        color:"black"
       },
-      headerTintColor: '#fff',
+      headerTintColor: 'black',
     }),
   },
 });
@@ -131,7 +132,7 @@ const DrawerNavigatorExample = createDrawerNavigator(
       },
     },
     OrderLink: {
-      screen: ServiceStack,
+      screen: OrderHistoryStack ,
       navigationOptions: {
         drawerIcon:(
           <Icon style={{ color:'#333333', fontSize:20}} name='home'/>
