@@ -21,7 +21,7 @@ import Login from './src/screen/login'
 import  Signup from './src/screen/Signup'
 import Appoint from './src/screen/appoint'
 import DrawerLayout from 'react-native-gesture-handler/DrawerLayout';
-
+import  'react-native-gesture-handler'
 
 
 const App = () => {
